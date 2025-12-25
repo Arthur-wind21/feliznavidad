@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Navidad Rouss</title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body>  
+    <div class="cards">
+        <div class="card" role="button" tabindex="0" aria-expanded="false">
+            <div class="header">
+                <div class="title">Gracias por todo</div>
+                <div class="date">24 de diciembre</div>
+            </div>
+
+            <div class="more">
+                <p>Rousss, no soy muy bueno con las palabras pero quiero agradecerte por todo, agradezco el haberte conocido y eres la persona que mas quiero. Te deseo lo mejor a ti y a tu familia para el dia de hoy,mañana y para siempre.
+                    Espero disfrutes mucho este dia y que la pases super bien, sabes que cuentas conmigo para lo que sea. Y te agradezco por estar en mi vida TQM
+                </p>
+            </div>
+
+            <div class="footer"></div>
+            <div class="autor">
+                <a href="#">
+                    <img src="arthur.jpg" alt="">
+                    <span>Arthur</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Habilita click y teclado para abrir/cerrar la tarjeta
+    (function(){
+      const cards = document.querySelectorAll('.cards .card');
+      cards.forEach(card => {
+        const toggle = () => {
+          const isOpen = card.classList.toggle('open');
+          card.setAttribute('aria-expanded', isOpen);
+        };
+        card.addEventListener('click', toggle);
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggle();
+          }
+        });
+      });
+    })();
+    </script>
+</body>
+</html>
